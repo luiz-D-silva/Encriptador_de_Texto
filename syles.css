@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.formularios {
+    height: 80vh;
+    width: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    box-shadow: 1px 1px 10px black;
+    padding: 1rem;
+    background-color: #6499e95a;
+}
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #6499e95a;
+    box-shadow: 1px 1px 10px black;
+}
+
+.feedback_alerta {
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.feedback_botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.feedback_imagem {
+    width: 100%;
+}
+
+
+@media (max-width: 57.7em) {
+    main {
+        flex-direction: column;
+        font-size: 1.5rem;
+    }
+
+    .botao {
+        width: 30vw;
+        margin: 0.5rem;
+    }
+
+    #texto1, #texto {
+        width: 55vw;
+    }
+
+    .feedback_textoEimg {
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .feedback_imagem {
+        width: 30vw
+    }
+
+
+    .feedback_alerta {
+        width: 100vw;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifra de César</title>
+    <link rel="stylesheet" href="syles.css">
+</head>
+
+<body>
+    <main>
+        <div class="formularios">
+            <div class="cifraDeCesar">
+                <h1>Cifra de César</h1>
+                <form id="cifraForm">
+                    <textarea id="texto1" name="texto" rows="4" cols="50" placeholder="Digite seu texto"></textarea>
+                    <br>
+                    <label for="deslocamento">Deslocamento:</label>
+                    <input type="number" id="deslocamento" name="deslocamento" min="1" max="25" value="3">
+                    <br>
+                    <button class="botao" type="submit">Criptografar</button>                   
+                </form>
+                <button class="botao" id="btnDescriptografar">Decifrar</button>
+                <button class="botao" id="copiarCesar"> Copiar </button>
+            </div>
+            <div class="cifraDaAlura">
+                <h1>Cifra da Alura</h1>
+                <form id="cifraForm2">
+                    <textarea id="texto" name="texto" rows="4" cols="50" placeholder="Digite seu texto"></textarea>
+                    <br>
+                    <button class="botao" type="submit">Criptografar</button>
+                </form>
+                <button class="botao" id="btnDescriptografar2">Decrifrar</button>
+                <button class="botao" id="copiarAlura"> Copiar </button>
+            </div>
+        </div>
+        <div  class="feedback">
+            <div class="feedback_textoEimg">
+                <h2 class="feedback_alerta" id="alerta">Aguardando Texto</h2>
+                <img class="feedback_imagem" id="imagem" src="img/aguardando.svg" alt="imagem-feedback">
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="cifraDeCesar.js"></script>
+    <script src="cifraDaAlura.js"></script>
+</body>
+
+</html>
