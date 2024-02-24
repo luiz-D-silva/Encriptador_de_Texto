@@ -46,7 +46,7 @@ document.getElementById("cifraForm").addEventListener("submit", function (event)
         const textoCriptografado = cifraDeCesar(texto, deslocamento);
         document.getElementById("texto1").value = textoCriptografado;
         document.getElementById("imagem").src = "img/cadeadoFechado.svg";
-        document.getElementById("alerta").textContent = "Texto Cripografado César";
+        document.getElementById("alerta").textContent = "Cifrado por César";
     } else {
         if (document.getElementById("texto1").value.length == "") {
             swal("Erro!", "Nada foi digitado", "warning"); 
@@ -68,7 +68,7 @@ document.getElementById("btnDescriptografar").addEventListener("click", function
         const textoDescriptografado = cifraDeCesar(textoCriptografado, -deslocamento);
         document.getElementById("texto1").value = textoDescriptografado;
         document.getElementById("imagem").src = "img/cadeadoAberto.svg";
-        document.getElementById("alerta").textContent = "Texto Descriptografado César";
+        document.getElementById("alerta").textContent = "Descifrado por César";
     } else {
         if (document.getElementById("texto1").value.length == "") {
             swal("Erro!", "Nada foi digitado", "warning"); 
@@ -84,6 +84,11 @@ document.getElementById("btnDescriptografar").addEventListener("click", function
 
 document.getElementById('copiarCesar').addEventListener('click', clipboardCopy);
 async function clipboardCopy() {
-  let text = document.querySelector("#texto1").value;
-  await navigator.clipboard.writeText(text);
+    if (document.getElementById("texto1").value.length == "") {
+        swal("Erro!", "Texto vazio", "warning");
+    } else {
+        let text = document.querySelector("#texto1").value;
+        await navigator.clipboard.writeText(text);
+        swal("Sucesso!", "Texto copiado", "success");
+    }
 }

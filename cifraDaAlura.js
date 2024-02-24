@@ -26,11 +26,17 @@ document.getElementById("cifraForm2").addEventListener("submit", function (event
     const textoCriptografado = cifraDaAlura(texto);
     document.getElementById("texto").value = textoCriptografado;
     document.getElementById("imagem").src = "img/cadeadoFechado.svg";
-    document.getElementById("alerta").textContent = "Texto Cripografado Alura";
-  } else{
+    document.getElementById("alerta").textContent = "Cifrado por Alura";
+  } else {
+    if (document.getElementById("texto").value.length == "") {
+        swal("Erro!", "Nada foi digitado", "warning"); 
+    } else {
+        swal("Lembre-se!", "Somente letras minúsculas e sem acento", "warning"); 
+    }
+
     document.getElementById("imagem").src = "img/naoEncriptado.svg";
     document.getElementById("alerta").textContent = "Erro! Texto inválido";
-  }
+}
 
 });
 
@@ -40,18 +46,29 @@ document.getElementById("btnDescriptografar2").addEventListener("click", functio
     const textoOriginal = decifraDaAlura(textoCriptografado);
     document.getElementById("texto").value = textoOriginal;
     document.getElementById("imagem").src = "img/cadeadoAberto.svg";
-    document.getElementById("alerta").textContent = "Texto Descriptografado Alura";
+    document.getElementById("alerta").textContent = "Descifrado por Alura";
   } else {
+    if (document.getElementById("texto").value.length == "") {
+        swal("Erro!", "Nada foi digitado", "warning"); 
+    } else {
+        swal("Lembre-se!", "Somente letras minúsculas e sem acento", "warning"); 
+    }
+
     document.getElementById("imagem").src = "img/naoEncriptado.svg";
     document.getElementById("alerta").textContent = "Erro! Texto inválido";
-  }
+}
 });
 
 
 document.getElementById('copiarAlura').addEventListener('click', clipboardCopy);
 async function clipboardCopy() {
-  let text = document.querySelector("#texto").value;
-  await navigator.clipboard.writeText(text);
+    if (document.getElementById("texto").value.length == "") {
+        swal("Erro!", "Texto vazio", "warning");
+    } else {
+        let text = document.querySelector("#texto").value;
+        await navigator.clipboard.writeText(text);
+        swal("Sucesso!", "Texto copiado", "success");
+    }
 }
 
 
