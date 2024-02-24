@@ -14,7 +14,7 @@ body {
 main {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 1rem;
 }
 
 .link {
@@ -23,15 +23,23 @@ main {
 }
 
 .formularios {
-    height: 80vh;
-    width: 50;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 100px;
+    gap: 1rem;
     box-shadow: 1px 1px 10px black;
-    padding: 1rem;
     background-color: #6499e95a;
+}
+
+.titulo {
+    text-decoration: none;
+}
+
+.botao {
+    border-radius: 10px;
+    padding: 3px;
+    background-color: rgba(250, 235, 215, 0.589);
 }
 
 .feedback {
@@ -50,9 +58,10 @@ main {
     text-align: center;
 }
 
-.feedback_botoes {
-    display: flex;
-    justify-content: space-between;
+
+
+.botao {
+    margin: 2px;
 }
 
 
@@ -62,30 +71,28 @@ main {
 
 
 @media (max-width: 57.7em) {
-    main {
-        flex-direction: column;
-        font-size: 1.5rem;
-    }
 
-    .botao {
-        width: 30vw;
-        margin: 0.5rem;
-    }
-
-
-    .feedback_textoEimg {
+    body {
         display: flex;
         align-items: center;
-        flex-direction: column;
     }
+
+    main {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .feedback {
+        align-items: center;
+    }
+
 
     .feedback_imagem {
-        width: 25vw
+        width: 25vw;
     }
 
-
-    .feedback_alerta {
-        font-weight: 700;
-        width: 100vw;
+    textarea {
+        width: 250px;
     }
+    
 }
