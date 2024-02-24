@@ -23,31 +23,35 @@
     <main>
         <div class="formularios">
             <div class="cifraDeCesar">
-                <h1><abbr class="titulo"
-                        title="Usa um determinado deslocamento de letras escolhido pelo usuário dentro do alfabeto para criptografra uma mensagem">Cifra
-                        de César</abbr></h1>
-                <form id="cifraForm">
-                    <textarea id="texto1" name="texto" rows="4" cols="50" placeholder="Digite seu texto"></textarea>
-                    <br>
-                    <label for="deslocamento">Deslocamento:</label>
-                    <input type="number" id="deslocamento" name="deslocamento" min="1" max="25" value="3">
-                    <br>
-                    <button class="botao" type="submit">Criptografar</button>
-                </form>
-                <button class="botao" id="btnDescriptografar">Decifrar</button>
-                <button class="botao" id="copiarCesar"> Copiar </button>
+                <div class="container">
+                    <h1><abbr class="titulo"
+                            title="Usa um determinado deslocamento de letras escolhido pelo usuário dentro do alfabeto para criptografra uma mensagem">Cifra
+                            de César</abbr></h1>
+                    <form id="cifraForm">
+                        <textarea id="texto1" name="texto" rows="4" cols="50" placeholder="Digite seu texto"></textarea>
+                        <br>
+                        <label for="deslocamento">Deslocamento:</label>
+                        <input type="number" id="deslocamento" name="deslocamento" min="1" max="25" value="3">
+                        <br>
+                        <button class="botao" type="submit">Criptografar</button>
+                    </form>
+                    <button class="botao" id="btnDescriptografar">Decifrar</button>
+                    <button class="botao" id="copiarCesar"> Copiar </button>
+                </div>
             </div>
             <div class="cifraDaAlura">
-                <h1><abbr class="titulo"
-                        title="Usa uma substituição predeterminada de letras para criptografar a mensagem original">Cifra
-                        da Alura</abbr></h1>
-                <form id="cifraForm2">
-                    <textarea id="texto" name="texto" rows="4" cols="50" placeholder="Digite seu texto"></textarea>
-                    <br>
-                    <button class="botao" type="submit">Criptografar</button>
-                </form>
-                <button class="botao" id="btnDescriptografar2">Decrifrar</button>
-                <button class="botao" id="copiarAlura"> Copiar </button>
+                <div class="container">
+                    <h1><abbr class="titulo"
+                            title="Usa uma substituição predeterminada de letras para criptografar a mensagem original">Cifra
+                            da Alura</abbr></h1>
+                    <form id="cifraForm2">
+                        <textarea id="texto" name="texto" rows="4" cols="50" placeholder="Digite seu texto"></textarea>
+                        <br>
+                        <button class="botao" type="submit">Criptografar</button>
+                    </form>
+                    <button class="botao" id="btnDescriptografar2">Decrifrar</button>
+                    <button class="botao" id="copiarAlura"> Copiar </button>
+                </div>
             </div>
         </div>
         <div class="feedback">
